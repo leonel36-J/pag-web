@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S - tennis</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <header>
+      <h1>Fut - tennis</h1>
+      <p class="subtitulo">Mejora tu estilo</p>
+  </header>
+
+  <main>
+    <article class="card" id="productCard">
+
+      <img class="img-zapa" src="data:image/jpeg;base64,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" alt="K.mbappe x New Nike Mercurial">
+
+      <section class="info">
+        <h2>K.mbappe x New Nike Mercurial</h2>
+        <p class="precio">Precio base: <strong>1200 Bs</strong></p>
+
+        <div class="cantidad">
+          <label>Cantidad:</label>
+          <button onclick="cambiarCantidad(-1)">−</button>
+          <p id="cantidad">0</p>
+          <button onclick="cambiarCantidad(1)">+</button>
+        </div>
+      </section>
+    </article>
+
+    <section class="total">
+      <p>Total a pagar: <b id="total">0</b> Bs</p>
+    </section>
+
+  </main>
+
+  <footer>
+      <p>© 2025 Fut-tennis </p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
