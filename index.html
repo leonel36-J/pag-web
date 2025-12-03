@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi tienda - FUT-TENNIS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<h1>FUT-TENNIS</h1>
+<body>
+    <header>
+        <IMg src="logo.png" alt="logo de futtenis" class="logo"></IMg>
+        <nav>
+            <ul>
+                <li><a href="#todos" onclick="filtrar('todos')">TODOS</a></li>
+                <li><a href="#adidas" onclick="filtrar('adidas')">ADIDAS</a></li>
+                <li><a href="#nike" onclick="filtrar('nike')">NIKE</a></li>
+                <li><a href="#futbol" onclick="filtrar('futbol')">PUMA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section id="productos" aria-labelledby="productos-titulo">
+            <h2 id="productos-titulo">PRODUCTOS</h2>
+            <div class="grid-productos" id="gridProductos">
+                <article class="producto" onclick="verDetalle(1, 'Adidas Predator Elite Boots Black Burgundy', 'ADIDAS', '$89.99')">
+                    <img src="https://image.goat.com/transform/v1/attachments/product_template_additional_pictures/images/095/523/477/original/1313045_01.jpg.jpeg?action=crop&width=750" alt="Adidas Predator Elite" class="producto-imagen">
+                    <h3>Adidas Predator Elite Boots Black Burgundy</h3>
+                    <p class="producto-precio">$89.99</p>
+                </article>
+
+                <article class="producto" onclick="verDetalle(2, 'Nike Zoom Mercurial Superfly', 'NIKE', '$95.99')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn--YHbmEq5Bhw4MLk2_2lxqhDLvBZuBGsfRgKA7JIWzatJMcrHiLW4E1o9fYTmoHxGZc&usqp=CAU" alt="Nike Mercurial Superfly" class="producto-imagen">
+                    <h3>Nike Zoom Mercurial Superfly</h3>
+                    <p class="producto-precio">$95.99</p>
+                </article>
+
+                <article class="producto" onclick="verDetalle(3, 'Puma Future 7 Match Plus FG', 'PUMA', '$87.99')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5io8r1KaOqD5K_r_GjMO2VgOLsgD66MdYXrht5kpGzF0N6MDhkL23AsdTSu4iwZ1ge8g&usqp=CAU" alt="Puma Future 7" class="producto-imagen">
+                    <h3>Puma Future 7 Match Plus FG</h3>
+                    <p class="producto-precio">$87.99</p>
+                </article>
+
+                <article class="producto" onclick="verDetalle(4, 'Nike Mercurial Vapor Initial', 'NIKE', '$99.99')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn--YHbmEq5Bhw4MLk2_2lxqhDLvBZuBGsfRgKA7JIWzatJMcrHiLW4E1o9fYTmoHxGZc&usqp=CAU" alt="Nike Mercurial Vapor" class="producto-imagen">
+                    <h3>Nike Mercurial Vapor Initial</h3>
+                    <p class="producto-precio">$99.99</p>
+                </article>
+
+                <article class="producto" onclick="verDetalle(5, 'Nike Phantom GX Elite', 'NIKE', '$92.99')">
+                    <img src="https://image.goat.com/transform/v1/attachments/product_template_additional_pictures/images/095/523/477/original/1313045_01.jpg.jpeg?action=crop&width=750" alt="Nike Phantom GX Elite" class="producto-imagen">
+                    <h3>Nike Phantom GX Elite</h3>
+                    <p class="producto-precio">$92.99</p>
+                </article>
+
+                <article class="producto" onclick="verDetalle(6, 'Nike Zoom Mercurial Superfly 15 Elite', 'NIKE', '$105.99')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5io8r1KaOqD5K_r_GjMO2VgOLsgD66MdYXrht5kpGzF0N6MDhkL23AsdTSu4iwZ1ge8g&usqp=CAU" alt="Nike Mercurial Superfly 15" class="producto-imagen">
+                    <h3>Nike Zoom Mercurial Superfly 15 Elite</h3>
+                    <p class="producto-precio">$105.99</p>
+                </article>
+
+                <article class="producto" onclick="verDetalle(7, 'Adidas Predator Pro Firm Ground Cleats', 'ADIDAS', '$91.99')">
+                    <img src="https://image.goat.com/transform/v1/attachments/product_template_additional_pictures/images/095/523/477/original/1313045_01.jpg.jpeg?action=crop&width=750" alt="Adidas Predator Pro" class="producto-imagen">
+                    <h3>Adidas Predator Pro Firm Ground Cleats</h3>
+                    <p class="producto-precio">$91.99</p>
+                </article>
+
+                <article class="producto" onclick="verDetalle(8, 'adidas X Speedportal Messi I FG', 'ADIDAS', '$350.00')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn--YHbmEq5Bhw4MLk2_2lxqhDLvBZuBGsfRgKA7JIWzatJMcrHiLW4E1o9fYTmoHxGZc&usqp=CAU" alt="Adidas Speedportal Messi" class="producto-imagen">
+                    <h3>adidas X Speedportal Messi I FG</h3>
+                    <p class="producto-precio">$350.00</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="detalle" aria-labelledby="detalle-titulo" role="region">
+            <button class="btn-cerrar" onclick="cerrarDetalle()">← Volver</button>
+            <h2 id="detalle-titulo">Nombre de producto</h2>
+            <p id="detalleDescripcion">Descripción del producto aquí...</p>
+            <p>Precio: <strong id="detallePrecio">00.00</strong></p>
+            <button onclick="confirmarCompra()">Comprar Ahora</button>
+        </section>
+
+        <section id="promociones" aria-labelledby="promociones-titulo">
+            <h2 id="promociones-titulo">PROMOCIONES</h2>
+            <div class="promocion">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5io8r1KaOqD5K_r_GjMO2VgOLsgD66MdYXrht5kpGzF0N6MDhkL23AsdTSu4iwZ1ge8g&usqp=CAU" alt="Adidas Speedportal Messi" class="promocion-imagen">
+                <div class="promocion-contenido">
+                    <h3>Adidas X Speedportal Messi.I FG</h3>
+                    <p>Unas botas legendarias para un jugador legendario. Llevadas por Leo mbappe fuera de Argentina una vez más, las botas de fútbol adidas X Speedportal Messi.I FG, que une el legado del mejor en dorado, con detalles inspirados por las botas que llevó en el escenario más grande en el 2006.</p>
+                    <div class="precio-promo">350,00 €</div>
+                    <button class="btn-comprar">Comprar Ahora</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" aria-labelledby="nosotros-titulo">
+            <h2 id="nosotros-titulo">SOBRE NOSOTROS</h2>
+            <div class="nosotros-contenido">
+                <div class="nosotros-texto">
+                    <h3>información</h3>
+                    <p>Somos FUT-TENNIS, tu destino web especializado en el rendimiento élite del fútbol. Ofrecemos la selección más completa de calzado deportivo original para Fútbol 11 y Fútbol Sala, con las últimas innovaciones de las marcas líderes mundiales: adidas, Nike y Puma. Equipate con la velocidad, el control y la precisión que necesitas para dominar la cancha, sea césped o parqué.</p>
+                </div>
+                <div class="nosotros-logo">
+                    <img src="LOGO 2.jpg" alt="logo de futtenis 2" class="logo-nosotros">
+                    <p>FUT-TENNIS</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p><strong>FUT-TENNIS</strong></p>
+        <p>Redes sociales: <a href="#facebook">f</a> • <a href="#twitter">𝕏</a> • <a href="#instagram">📷</a></p>
+        <p>&copy; 2024 Todos los derechos reservados</p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
