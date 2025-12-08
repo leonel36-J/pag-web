@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('productoPrecio').textContent = precio;
     if(descripcion) {
         document.getElementById('productoDescripcion').textContent = descripcion;
-    }a
-    if(imagen) {
+    }
+   if(imagen) 
+   {
         document.getElementById('productoImagen').src = imagen;
     }
     
@@ -53,3 +54,31 @@ function volver() {
     
     // Redirigir 
     window.location.href = 'index.html';}
+ 
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const nombre = localStorage.getItem('productoNombre');
+    const precio = localStorage.getItem('productoPrecio');
+    
+    const telefonoVendedor = '59172079403'; 
+
+    if (nombre && precio) {
+        //  Crear mensaje 
+        let mensaje = `¡Hola! Estoy interesado en comprar el producto: ${nombre}.`;
+        mensaje += `\nEl precio es de ${precio}.`;
+        mensaje += `¿Podrían confirmarme la disponibilidad y la forma de pago?`;
+
+        // mensaje
+        const mensajeCodificado = encodeURIComponent(mensaje);
+
+        //enlace
+        const whatsappURL = `https://wa.me/${telefonoVendedor}?text=${mensajeCodificado}`;
+
+        // Asignar el enlace al elemento con el id 'whatsappLink'
+        const whatsappLinkElement = document.getElementById('whatsappLink');
+        if (whatsappLinkElement) {
+            whatsappLinkElement.href = whatsappURL;
+        }
+    }
+});
