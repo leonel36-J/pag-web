@@ -345,3 +345,32 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+/* Estilos adicionales para la página de compra */
+.total {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* BOTON VOLVER */
+.volver {
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.volver:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
