@@ -1,20 +1,55 @@
+// Cargar datos del producto cuando la página cargue
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Fut-Tennis página de compra cargada correctamente');
+    
+    //  datos del localStorage
+    const nombreProducto = localStorage.getItem('productoNombre');
+    const precio = localStorage.getItem('productoPrecio');
+    const descripcion = localStorage.getItem('productoDescripcion');
+    const imagen = localStorage.getItem('productoImagen');
+    //mostrar
+    if (nombreProducto && precio) {
+    document.getElementById('productoNombre').textContent = nombreProducto;
+    document.getElementById('productoPrecio').textContent = precio;
+    if(descripcion) {
+        document.getElementById('productoDescripcion').textContent = descripcion;
+    }a
+    if(imagen) {
+        document.getElementById('productoImagen').src = imagen;
+    }
+    
+    }});
+
+// Función de compra
 function comprar() {
     const boton = document.querySelector('.Comprar');
+    const nombreProducto = document.getElementById('productoNombre').textContent;
+    const precio = document.getElementById('productoPrecio').textContent;
     
-    // porcesando boton
+    // Procesando botón
     boton.disabled = true;
     boton.textContent = 'Procesando...';
     
-    // Simula proceso de compra 
+    // Simulacion
     setTimeout(() => {
-        alert('¡Compra realizada exitosamente!\n\nGracias por comprar en Fut-Tennis');
-
-        boton.disabled = false;
-        boton.textContent = 'Comprar Ahora';
-    }, 2000);
+        alert(`Su compra fue realizada exitosamente!\nProducto: ${nombreProducto}\nPrecio: ${precio}\n\nGracias por comprar en Fut-Tennis ☣`);
+        // Limpiar localStorage
+        localStorage.removeItem('productoNombre');
+        localStorage.removeItem('productoPrecio');
+        localStorage.removeItem('productoDescripcion');
+        localStorage.removeItem('productoImagen');
+        
+        // Volver a la tienda
+        window.location.href = 'index.html';
+    }, 1000);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Fut-Tennis cargado correctamente');
+function volver() {
+    // Limpiar
+    localStorage.removeItem('productoNombre');
+    localStorage.removeItem('productoPrecio');
+    localStorage.removeItem('productoDescripcion');
+    localStorage.removeItem('productoImagen');
     
-});
+    // Redirigir 
+    window.location.href = 'index.html';}
