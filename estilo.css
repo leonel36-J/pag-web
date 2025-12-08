@@ -8,6 +8,15 @@ body{
   text-align:center;
 }
 
+.producto-imagen-confirmacion {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 15px auto; 
+  }
+
 /* TITULO */
 header{
   padding:20px;
@@ -80,6 +89,22 @@ header{
 .Comprar:hover {
   background-color: rgb(130, 4, 4);
   transform: translateY(-3px);
+}
+.btn-rojo {
+  display: inline-block;
+  padding: 15px 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  background-color: red;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(145, 3, 3, 0.584);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
 /* BOTON VOLVER */
