@@ -1,16 +1,24 @@
 // FUNCIÓN PARA VER EL DETALLE DEL PRODUCTO
-// Se ejecuta cuando haces clic en un producto
 function verDetalle(id, nombre, marca, precio, evento) {
     
-    // Buscar producto clickeasdo para tenr su imagen
+    // Buscar producto 
     var productoClickeado = evento.target.closest('.producto');
     var imgSrc = productoClickeado.querySelector('img').src;
+    // CÓDIGO AÑADIDO PARA ASEGURAR EL PRECIO EN BS CORRECTO
+    // Busca el precio final dentro del elemento del producto. Se prioriza '.precio-promo' 
+    // y como alternativa, se busca cualquier elemento con la clase '.precio'.
+    var precioVentaElemento = productoClickeado.querySelector('.precio-promo') || productoClickeado.querySelector('.precio'); 
+
+    if (precioVentaElemento) {
+        //precio producto
+        precio = precioVentaElemento.textContent.trim();
+    }
 
     // Mostrar el nombre y precio en detalle
     document.getElementById('detalle-titulo').textContent = nombre;
     document.getElementById('detallePrecio').textContent = precio;
    
-    // Variable para guardar la descripción
+    // Variable para guardar descripción
     let desc = '';
     // DESCRIPCIONES DE PRODUCTOS ADIDAS
     if(nombre == 'Adidas Predator League') desc = 'Versión de gama media del icónico Predator. Ofrecen buen control y agarre para tiros con efecto.';
@@ -80,7 +88,7 @@ function confirmarCompra() {
 function comprarPromocion() {
     localStorage.setItem('productoNombre', 'Adidas X Speedportal Messi.I FG');
     localStorage.setItem('productoPrecio', 'Bs350,00');
-    localStorage.setItem('productoDescripcion', 'Unas botas legendarias para un jugador legendario. Llevadas por Leo Messi fuera de Argentina una vez más, las botas de fútbol adidas X Speedportal Messi.I FG, que une el legado del mejor en dorado, con detalles inspirados por las botas que llevó en el escenario más grande en el 2006.');
+    localStorage.setItem('productoDescripcion', 'Edición especial inspirada en Messi, diseñadas para velocidad y agilidad en césped natural (FG).');
     localStorage.setItem('productoImagen', 'https://ftblboots.com/cdn/shop/files/IMG_1295.jpg?v=1691264705&width=1445');
     window.location.href = 'pag2.html';
 }
