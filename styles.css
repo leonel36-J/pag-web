@@ -24,9 +24,8 @@ h1 img {
 }
 /*fondo menu */
 header {
-    background-color: #000000;
+    background-color: black;
     padding: 15px 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 .logo {
     max-width: 80px;
@@ -48,7 +47,7 @@ nav a {
     transition: color 0.3s ease;
 }
 nav a:hover {
-    color: #ff00519c; 
+    color: #ff0051c7; 
 }
 main {
     max-width: 1400px;
@@ -80,14 +79,7 @@ main {
     font-weight: bold;
     transition: all 0.3s ease;
 }
-.filtros-container button:hover,
-.filtros-container button.activo {
-    background-color: #fffdfd;
-    color: #000;
-}
-section {
-    margin-bottom: 40px;
-}
+
 
 /*linea y titulo*/
 h2 {
@@ -110,7 +102,7 @@ h2 {
     background: #1a1a1a;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px black;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     display: flex;
@@ -285,6 +277,8 @@ button:hover {
     font-weight: bold;
     color: #ffffff;
 }
+
+
 
 footer {
     background-color: #000000;
