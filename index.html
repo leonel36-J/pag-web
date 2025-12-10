@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,17 +8,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>FUT-TENNIS <img src="LOGO FUTTENIS.png" alt="LOGO ARRIBA"></h1>
+    <h1><img src="LOGO PRINCIPAL.jpg.png" alt="LOGO ARRIBA"></h1>
     <header>
+
+        <button class="hamburger-btn" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
-            <ul>
+            <ul id="navMenu"> 
                 <li><a href="#adidas" onclick="filtrar('Adidas')">ADIDAS</a></li>
                 <li><a href="#nike" onclick="filtrar('NIKE')">NIKE</a></li>
                 <li><a href="#puma" onclick="filtrar('Puma')">PUMA</a></li>
+                  <li><a href="contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
-
     <main id="contenido">
         <section id="productos" aria-labelledby="productos-titulo">
             <div class="filtros-container">
@@ -28,15 +35,15 @@
                 <button class="filtro-tipo" onclick="filtrarTipo('futbolsala')">Fútbol Sala</button>
             </div>
 
-            <h2>ADIDAS</h2>
+            <h2 id="titulo-adidas">ADIDAS</h2>
             <div class="grid-productos" id="gridadidas">
-                <article class="producto" data-type="futbol11" onclick="verDetalle(1, 'Adidas Predator League', 'ADIDAS', 'Bs189.99', event)">
+                <article class="producto" data-type="futbol11" data-brand="adidas" onclick="verDetalle(1, 'Adidas Predator League', 'ADIDAS', 'Bs189.99', event)">
                     <img src="https://cdn.pacifiko.com/image/cache/catalog/p/ZWM3YTI3Mz-500x500.jpg" alt="Adidas Predator League" class="producto-imagen">
                     <h3>Adidas Predator League</h3>
                     <p class="producto-precio">Bs189.99</p>
                 </article>
 
-                <article class="producto" data-type="futbol11" onclick="verDetalle(1, 'Adidas Predator League', 'ADIDAS', 'Bs190.00', event)">
+                <article class="producto" data-type="futbol11" onclick="verDetalle(1, 'Adidas Copa 11 Pure Elite FG', 'ADIDAS', 'Bs190.00', event)">
                     <img src="https://images.media-arocam.com/PQX3dXdtRaFTPFfp8GqWGEIkmkg=/fit-in/1000x1000/w38256/HBS/al1KGf3V_HBS.png" alt="Adidas Copa 11 Pure Elite FG" class="producto-imagen">
                     <h3>Adidas Copa 11 Pure Elite FG</h3>
                     <p class="producto-precio">Bs190.00</p>
@@ -66,22 +73,27 @@
                     <p class="producto-precio">Bs179.99</p>
                 </article>
 
-                <article class="producto" data-type="futbolsala" onclick="verDetalle(7, 'Adidas Crazyfast', 'ADIDAS', 'Bs299.99', event)">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_932949-MLM78019098084_082024-O-calzado-x-crazyfast3-sin-cordones-cesped-artificial-id9347.webp" alt="Adidas Crazyfast" class="producto-imagen">
-                    <h3>Adidas Crazyfast</h3>
+                <article class="producto" data-type="futbolsala" onclick="verDetalle(7, '', 'ADIDAS', 'Bs299.99', event)">
+                    <img src="https://media.futbolmania.com/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/I/F/IF1345_zapatillas-futbol-sala-color-blanco-adidas-f50-club-in_1_pie-derecho.jpg" alt="adidas F50 Club IN" class="producto-imagen">
+                    <h3>adidas F50 Club</h3>
                     <p class="producto-precio">Bs299.99</p>
                 </article>
 
-                <article class="producto" data-type="futbolsala" onclick="verDetalle(8, 'adidas Copa Pure.3 TF', 'ADIDAS', 'Bs280.00', event)">
-                    <img src="https://acdn-us.mitiendanube.com/stores/002/249/411/products/tenis-adidas-futbol-rapido-copa-pure-3-turf-100-originales1-3754594883051334c116818000766625-480-0.jpeg" alt="adidas Copa Pure.3 TF" class="producto-imagen">
-                    <h3>adidas Copa Pure.3 TF</h3>
+                <article class="producto" data-type="futbolsala" onclick="verDetalle(8, 'adidas Predator Club IN Sala', 'ADIDAS', 'Bs280.00', event)">
+                    <img src="https://media.futbolmania.com/media/catalog/product/cache/1/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/I/D/ID3792_zapatillas-futbol-sala-adidas-predator-club-in-sala-color-rojo_miniatura.jpg" alt="adidas Predator Club IN Sala" class="producto-imagen">
+                    <h3>adidas Predator Club IN Sala</h3>
                     <p class="producto-precio">Bs280.00</p>
                 </article>
+            </div> 
+                <div class="pagination-wrapper" id="pagination-wrapper-adidas">
+                <button id="prevBtn-adidas" onclick="changeBrandPage('adidas', -1)">Anterior</button>
+                <div class="page-numbers" id="pageNumbers-adidas"></div>
+                <button id="nextBtn-adidas" onclick="changeBrandPage('adidas', 1)">Siguiente</button>
+    
             </div>
-
-            <h2>NIKE</h2>
+            <h2 id="titulo-nike">NIKE</h2>
             <div class="grid-productos" id="gridnike">
-                <article class="producto" data-type="futbol11" onclick="verDetalle(1, 'Nike Air Zoom Mercurial', 'NIKE', 'Bs189.99', event)">
+                <article class="producto" data-type="futbol11" data-brand="nike" onclick="verDetalle(1, 'Nike Air Zoom Mercurial', 'NIKE', 'Bs189.99', event)">
                     <img src="https://www.futbolemotion.com/imagesarticulos/232339/grandes/bota-nike-air-zoom-mercurial-superfly-10-academy-km-ag-nino-laser-orange-armory-navy-1.webp" alt="Nike Air Zoom Mercurial" class="producto-imagen">
                     <h3>Nike Air Zoom Mercurial</h3>
                     <p class="producto-precio">Bs189.99</p>
@@ -105,7 +117,7 @@
                     <p class="producto-precio">Bs199.99</p>
                 </article>
 
-                <article class="producto" data-type="futbol11" onclick="verDetalle(5, 'Nike Phantom GX Elite', 'NIKE', 'Bs299.999', event)">
+                <article class="producto" data-type="futbol11" onclick="verDetalle(5, 'Nike Phantom GX Elite', 'NIKE', 'Bs299.99', event)">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPJHIE5jERbXK-halyWUAlTOd3hShdwQqjPA&s" alt="Nike Phantom GX Elite" class="producto-imagen">
                     <h3>Nike Phantom GX Elite</h3>
                     <p class="producto-precio">Bs299.99</p>
@@ -128,11 +140,14 @@
                     <h3>Nike Zoom Mercurial Vapor 15</h3>
                     <p class="producto-precio">Bs350.00</p>
                 </article>
-            </div>
-
-            <h2>PUMA</h2>
-            <div class="grid-productos" id="gridpuma">
-                <article class="producto" data-type="futbol11" onclick="verDetalle(1, 'PUMA FUTURE 7 MATCH', 'PUMA', 'Bs289.99', event)">
+            </div> <div class="pagination-wrapper" id="pagination-wrapper-nike">
+    <button id="prevBtn-nike" onclick="changeBrandPage('nike', -1)">Anterior</button>
+    <div class="page-numbers" id="pageNumbers-nike"></div>
+    <button id="nextBtn-nike" onclick="changeBrandPage('nike', 1)">Siguiente</button>
+</div>
+<h2 id="titulo-puma">PUMA</h2>
+<div class="grid-productos" id="gridpuma">
+                <article class="producto" data-type="futbol11" data-brand="puma" onclick="verDetalle(1, 'PUMA FUTURE 7 MATCH', 'PUMA', 'Bs289.99', event)">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5IZgXiYsv5gt9JxFLfwaMqvttccvuIZTlMg&s" alt="PUMA FUTURE 7 MATCH" class="producto-imagen">
                     <h3>PUMA FUTURE 7 MATCH</h3>
                     <p class="producto-precio">Bs289.99</p>
@@ -162,7 +177,7 @@
                     <p class="producto-precio">Bs199.99</p>
                 </article>
 
-                <article class="producto" data-type="futbol11" onclick="verDetalle(6, 'Nike Zoom Mercurial Superfly 15 Elite', 'NIKE', 'Bs199.99', event)">
+                <article class="producto" data-type="futbol11" onclick="verDetalle(6, 'Puma Future 7 Pro', 'PUMA', 'Bs199.99', event)">
                     <img src="https://media.futbolmania.com/media/catalog/product/cache/1/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/1/0/108088-03_botas-de-futbol-para-cesped-artificial-puma-future-7-pro--mg-color-gris-y-purpura_miniatura.jpg" alt="Puma Future 7 Pro" class="producto-imagen">
                     <h3>Puma Future 7 Pro</h3>
                     <p class="producto-precio">Bs199.99</p>
@@ -174,20 +189,31 @@
                     <p class="producto-precio">Bs289.99</p>
                 </article>
 
-                <article class="producto" data-type="futbolsala" onclick="verDetalle(8, 'Puma Future 8 Play', 'PUMA', 'Bs350.00', event)">
-                    <img src="https://showsport.vtexassets.com/arquivos/ids/870507-150-auto?v=638811150279100000&width=150&height=auto&aspect=true" alt="Puma Future 8 Play" class="producto-imagen">
-                    <h3>Puma Future 8 Play</h3>
+                <article class="producto" data-type="futbolsala" onclick="verDetalle(8, 'Puma Ultra Match IT', 'PUMA', 'Bs350.00', event)">
+                    <img src="https://media.futbolmania.com/media/catalog/product/cache/1/image/0f330055bc18e2dda592b4a7c3a0ea22/1/0/107221-03_zapatillas-futbol-sala-color-z-turquesa-puma-ultra-match-it_1_pie-derecho.jpg" alt="Puma Ultra Match IT" class="producto-imagen">
+                    <h3>Puma Ultra Match IT</h3>
                     <p class="producto-precio">Bs350.00</p>
                 </article>
             </div>
+            <div class="pagination-wrapper" id="pagination-wrapper-puma">
+    <button id="prevBtn-puma" onclick="changeBrandPage('puma', -1)">Anterior</button>
+    <div class="page-numbers" id="pageNumbers-puma"></div>
+    <button id="nextBtn-puma" onclick="changeBrandPage('puma', 1)">Siguiente</button>
+</div>
         </section>
 
         <section id="detalle" aria-labelledby="detalle-titulo" role="region">
-            <button class="btn-cerrar" onclick="cerrarDetalle()">← Volver</button>
-            <h2 id="detalle-titulo">Nombre de producto</h2>
-            <p id="detalleDescripcion">Descripción del producto aquí...</p>
-            <p>Precio: <strong id="detallePrecio">Bs00.00</strong></p>
-            <button onclick="confirmarCompra()">Comprar Ahora</button>
+            <button class="btn-cerrar" onclick="cerrarDetalle()">← Seguir Comprando</button>
+            <h2 id="detalle-titulo">Tu Carrito de Compras</h2>
+            
+            <div id="listaProductosSeleccionados">
+                <p>Aún no has seleccionado ningún producto.</p>
+            </div>
+
+            <div class="resumen-compra">
+                <p>Total: <strong id="detalleTotal">Bs0.00</strong></p>
+                <button onclick="confirmarCompra()">Comprar Ahora</button>
+            </div>
         </section>
 
         <section id="promociones" aria-labelledby="promociones-titulo">
@@ -224,6 +250,24 @@
         <p>&copy; 2025 LC - Todos los derechos reservados</p>
     </footer>
 
-    <script src="scriptprin.js"></script>
+
+
+    <div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="cerrarModal()">&times;</span>
+        <div class="modal-body">
+            <img id="modalImagen" src="" alt="Imagen del producto" class="modal-img">
+            <div class="modal-info">
+                <h3 id="modalNombre">Nombre del Producto</h3>
+                <p id="modalDescripcion">Descripción detallada...</p>
+                <p>Precio: <strong id="modalPrecio">Bs0.00</strong></p>
+                
+                <button id="modalBotonComprar" class="btn-comprar">Añadir al Carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
