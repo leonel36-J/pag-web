@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*para que los 2 no aumenten tamaño y sea mas responsive*/
+    box-sizing: border-box;
 }
 
 body {
@@ -9,36 +9,40 @@ body {
     background-color: #000000;
     color: #fff;
 }
-/*logo resp*/
+
 h1 {
     text-align: center;
     padding: 20px;
     font-size: 32px;
     color: #fff;
 }
+
 h1 img {
     max-width: 100%;
     width: 100%;
     height: auto;
     display: block;
 }
-/*fondo menu */
+
 header {
     background-color: black;
     padding: 15px 20px;
+    position: relative;
 }
+
 .logo {
     max-width: 80px;
     height: auto;
     margin-right: 20px;
 }
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
     justify-content: center;
 }
-/*MENUU*/
+
 nav a {
     color: #ffffff;
     text-decoration: none;
@@ -46,9 +50,11 @@ nav a {
     font-weight: bold;
     transition: color 0.3s ease;
 }
+
 nav a:hover {
-    color: #ff0051c7; 
+    color: #ff0051c7;
 }
+
 main {
     max-width: 1400px;
     margin: 0 auto;
@@ -68,7 +74,6 @@ main {
     color: #ffffff;
 }
 
-/*filtros*/
 .filtros-container button {
     padding: 10px 20px;
     border: 2px solid #ffffff;
@@ -80,8 +85,6 @@ main {
     transition: all 0.3s ease;
 }
 
-
-/*linea y titulo*/
 h2 {
     text-align: left;
     margin-bottom: 20px;
@@ -103,13 +106,13 @@ h2 {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px black;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para el hover. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     border: 1px solid #333;
 }
-/*al poner el mouse*/
+
 .producto:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
@@ -124,7 +127,6 @@ h2 {
     display: block;
 }
 
-/*nombre prod*/
 h3 {
     padding: 12px;
     font-size: 16px;
@@ -133,6 +135,7 @@ h3 {
     display: flex;
     align-items: center;
 }
+
 .producto-precio {
     padding: 12px;
     font-size: 18px;
@@ -141,7 +144,6 @@ h3 {
     border-top: 1px solid #333;
 }
 
-/*descripcion*/
 #detalle {
     background-color: #1a1a1a;
     padding: 30px;
@@ -150,12 +152,11 @@ h3 {
     margin: 30px 0;
     display: none;
 }
-/*mostrar detalle prod*/
+
 #detalle.visible {
     display: block;
 }
 
-/*volver*/
 .btn-cerrar {
     background-color: #000000;
     color: #ffffff;
@@ -167,11 +168,11 @@ h3 {
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
 }
+
 .btn-cerrar:hover {
     background-color: #9e9e9e;
 }
 
-/*comprare ahora */
 button {
     background-color: #ffffff;
     color: hsl(0, 0%, 0%);
@@ -183,11 +184,11 @@ button {
     transition: background-color 0.3s ease;
     margin-top: 10px;
 }
+
 button:hover {
     background-color: #c906578f;
 }
 
-/*promo*/
 .promocion {
     background-color: #1a1a1a;
     border: 1px solid #333;
@@ -196,12 +197,14 @@ button:hover {
     overflow: hidden;
     margin-bottom: 20px;
 }
+
 .promocion-imagen {
     width: 40%;
     height: auto;
     min-height: 300px;
     object-fit: cover;
 }
+
 .promocion-contenido {
     padding: 30px;
     flex: 1;
@@ -209,7 +212,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
 }
-/*titulo promo*/
+
 .promocion-contenido h3 {
     font-size: 24px;
     margin-bottom: 15px;
@@ -233,7 +236,6 @@ button:hover {
     width: fit-content;
 }
 
-/*nosotros */
 .nosotros-contenido {
     display: flex;
     gap: 40px;
@@ -278,14 +280,12 @@ button:hover {
     color: #ffffff;
 }
 
-
-
 footer {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
     padding: 30px;
-    border-top: 1px solid #333; /* Línea de separación superior */
+    border-top: 1px solid #333;
     margin-top: 40px;
 }
 
@@ -303,11 +303,72 @@ footer a:hover {
     color: #ff00ee;
 }
 
-/*resposiviad*/
-@media (max-width: 1200px) { 
+@media (max-width: 1200px) {
     .grid-productos {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.volver {
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.volver:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 20;
+}
+
+.hamburger-btn span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+    display: block;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 @media (max-width: 768px) {
@@ -328,9 +389,40 @@ footer a:hover {
         flex-direction: column;
     }
 
+    .hamburger-btn {
+        display: flex;
+    }
+
     nav ul {
+        display: none;
         flex-direction: column;
-        gap: 10px;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        border-top: 1px solid #333;
+        width: 100%;
+    }
+
+    nav ul.activo {
+        display: flex !important;
+    }
+
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid #333;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px 20px;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+    }
+
+    nav a:hover {
+        background-color: #333;
     }
 }
 
@@ -339,148 +431,33 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
-/* Estilos adicionales para la página de compra */
-.total {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  margin: 20px 0;
-}
 
-/* BOTON VOLVER */
-.volver {
-  padding: 12px 40px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #fff;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.volver:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-}
-
-
-
-/* Asegura que el HEADER pueda posicionar al botón */
-header {
-    position: relative; 
-}
-
-/* BOTÓN HAMBURGUESA */
-.hamburger-btn {
-    display: none; /* Oculto por defecto en desktop */
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute; /*botón en la esquina superior derecha*/
-    right: 20px;
-    top: 15px;
-    background: none;
-    border: none;
-    padding: 10px;
-    z-index: 20; /* sobre otros elementos */
-}
-
-.hamburger-btn span {
-    width: 25px;
-    height: 3px;
-    background-color: #fff; /* Las líneas del color del menu */
-    margin: 5px 0;
-    transition: 0.3s;
-    display: block;
-}
-
-/* ANIMACIÓN DEL BOTÓN  */
-.hamburger-btn.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger-btn.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-btn.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-/* RESPONSIVE: */
-@media (max-width: 768px) {
-    
-    /* Mostrar el botón en móvil */
-    .hamburger-btn {
-        display: flex; 
-    }
-
-    nav ul {
-        display: flex; 
-        flex-direction: column;
-        gap: 0;
-        padding: 0;
-        max-height: 0; /* Esto oculta el menú con transición */
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-        
-        position: absolute;
-        top: 60px; /* Ajusta según la altura de tu header */
-        left: 0;
-        right: 0;
-        background-color: black; /* Fondo del menú desplegable */
-        box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-        z-index: 10; 
-    }
-    
-    /* Clase JS para MOSTRAR el menú */
-    nav ul.activo {
-        max-height: 300px;
-    }
-
-    nav li {
-        border-bottom: 1px solid #333;
-    }
-
-    nav a {
-        display: block;
-        padding: 15px 20px;
-        text-align: center;
-        color: #fff; 
-    }
-    nav a:hover {
-        background-color: #333;
-    }
-}
-
-/* RESPONsivi */
 @media (min-width: 769px) {
     .hamburger-btn {
         display: none;
     }
+
     nav ul {
-        display: flex !important; 
-        max-height: none !important;
-        position: static;
+        display: flex !important;
+        gap: 30px;
+        justify-content: center;
         background-color: transparent;
-        box-shadow: none;
+        border-top: none;
+        width: auto;
     }
+
+    nav li {
+        width: auto;
+        border-bottom: none;
+    }
+
     nav a {
         color: #ffffff;
+        width: auto;
+        padding: 0 !important;
     }
 }
 
-
-
-
-
-/*  CARRITO */
-/* la lista del carrito */
 #listaProductosSeleccionados ul {
     list-style: none;
     padding: 0;
@@ -495,7 +472,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-left: 3px solid red; 
+    border-left: 3px solid red;
 }
 
 .precio-carrito {
@@ -516,7 +493,7 @@ header {
 #detalleTotal {
     font-size: 24px;
     font-weight: bold;
-    color: #ff0000; /* Color para el total */
+    color: #ff0000;
 }
 
 .btn-eliminar {
@@ -534,43 +511,42 @@ header {
     background-color: #ff0000;
 }
 
-
-/*  POPUP  */
-
-/* Fondo oscuro y fijo */
 .modal {
-    display: none; 
-    position: fixed; 
+    display: none;
+    position: fixed;
     z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: black(0,0,0,0.8); 
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Contenido del modal */
 .modal-content {
     background-color: #1a1a1a;
-    margin: 5% auto; 
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #d61a238a;
     border-radius: 10px;
-    width: 90%; 
+    width: 90%;
     max-width: 800px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     animation-name: animatetop;
     animation-duration: 0.4s
 }
 
-/* Animación entrada */
 @keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
-/* Botón cerrar */
 .close-btn {
     color: #aaa;
     float: right;
@@ -585,14 +561,12 @@ header {
     cursor: pointer;
 }
 
-/* Contenedor principal */
 .modal-body {
     display: flex;
     gap: 30px;
     padding: 20px 0;
 }
 
-/* imagen dentro del modal */
 .modal-img {
     width: 40%;
     max-height: 350px;
@@ -600,7 +574,6 @@ header {
     border-radius: 5px;
 }
 
-/* Información */
 .modal-info {
     width: 60%;
     display: flex;
@@ -625,14 +598,12 @@ header {
         flex-direction: column;
         text-align: center;
     }
-    .modal-img, .modal-info {
+
+    .modal-img,
+    .modal-info {
         width: 100%;
     }
 }
-
-
-
-/* PAGINACIÓN */
 
 .pagination-wrapper {
     display: flex;
@@ -641,7 +612,7 @@ header {
     gap: 10px;
     margin: 40px 0;
     padding-top: 20px;
-    border-top: 1px solid #333; /* Separación de la paginación con el contenido anterior. */
+    border-top: 1px solid #333;
 }
 
 .pagination-wrapper button {
@@ -653,7 +624,7 @@ header {
     border-radius: 10px;
     font-weight: bold;
     transition: all 0.3s ease;
-    margin: 0;  /* Asegura que no tenga el margen superior del estilo base. */
+    margin: 0;
 }
 
 .pagination-wrapper button:hover:not(:disabled) {
