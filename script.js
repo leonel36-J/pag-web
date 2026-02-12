@@ -497,7 +497,6 @@ function obtenerDescripcion(nombre) {
 }
 
 
-// MENÚ HAMBURGUESA
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const navMenu = document.getElementById('navMenu');
 
@@ -508,16 +507,19 @@ if (hamburgerBtn && navMenu) {
         navMenu.classList.toggle('activo');
     }
     
-    hamburgerBtn.addEventListener('click', toggleMenu);
+    hamburgerBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleMenu();
+    });
 
     document.querySelectorAll('#navMenu a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('activo')) {
-                toggleMenu(); 
-            }
+        link.addEventListener('click', function(e) {
+            hamburgerBtn.classList.remove('active');
+            navMenu.classList.remove('activo');
         });
     });
 }
+
 
 window.onload = function() {
     renderProducts(); // <-- INICIALIZA EL FILTRADO Y PAGINACIÓN
